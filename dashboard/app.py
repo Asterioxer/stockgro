@@ -116,8 +116,8 @@ def main():
         target_ticker = col_f1.selectbox("Target Asset", selected_tickers, key="fcast_tick")
         models = ["ARIMA"]
 
-        if LSTM_AVAILABLE:
-            models.append("LSTM Neural Network")
+        # if LSTM_AVAILABLE:
+        #     models.append("LSTM Neural Network")
 
         model_type = col_f2.radio("Model Architecture", models)
         
@@ -126,8 +126,8 @@ def main():
             with st.spinner(f"Training {model_type} on {target_ticker}... This may take a moment."):
                 if model_type == "ARIMA":
                     df_pred, metrics = run_arima_pipeline(series, test_size=60)
-                elif LSTM_AVAILABLE:
-                    df_pred, metrics = run_lstm_pipeline(series, epochs=3)
+                # elif LSTM_AVAILABLE:
+                #     df_pred, metrics = run_lstm_pipeline(series, epochs=3)
                 else:
                     st.error("LSTM model unavailable in deployment environment.")
                     st.stop()# Low epochs for fast web demo
