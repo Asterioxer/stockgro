@@ -21,7 +21,9 @@ project/
 │   └── evaluation.py      # RMSE, MAE, MAPE, Directional Accuracy
 ├── dashboard/app.py       # Multi-Tab Streamlit Interactive UI
 ├── reports/               # Final Markdown Documentation
-└── screenshots/           # Authentic StockGro execution evidence
+├── screenshots/           # Authentic StockGro execution evidence
+├── requirements.txt
+└── runtime.txt 
 ```
 
 ## 🚀 Setup & Installation
@@ -62,3 +64,6 @@ This will open a 5-tab web application where you can explore Asset Analytics, Vo
 - **Time Series Forecasting**: Utilizes ARIMA for linear trend projection and Deep LSTM Networks for discovering non-linear sequence dependencies. Evaluated rigorously using RMSE and Directional Accuracy.
 - **Modern Portfolio Theory**: Computes the Covariance Matrix of asset log returns to generate the "Efficient Frontier", securing the highest possible return per unit of risk.
 - **Real-World Testing**: The mathematically determined weights were executed in a virtual ₹10,00,000 StockGro environment.
+
+## Deployment Link
+https://asterioxer-stockgro-dashboardapp-sgci6z.streamlit.app/
