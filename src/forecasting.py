@@ -7,8 +7,12 @@ try:
     import tensorflow as tf
 except:
     tf = None
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense, Dropout
+try:
+    from tensorflow.keras.models import Sequential
+    from tensorflow.keras.layers import Dense, LSTM, Dropout
+    TENSORFLOW_AVAILABLE = True
+except:
+    TENSORFLOW_AVAILABLE = False
 from src.evaluation import evaluate_forecast
 
 def run_arima_pipeline(series: pd.Series, test_size=30, order=(5,1,0)):
