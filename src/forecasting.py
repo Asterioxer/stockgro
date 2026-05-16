@@ -1,8 +1,12 @@
 import pandas as pd
 import numpy as np
+# pyrefly: ignore [missing-import]
 from statsmodels.tsa.arima.model import ARIMA
 from sklearn.preprocessing import MinMaxScaler
-import tensorflow as tf
+try:
+    import tensorflow as tf
+except:
+    tf = None
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout
 from src.evaluation import evaluate_forecast
