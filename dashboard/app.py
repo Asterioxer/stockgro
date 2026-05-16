@@ -173,7 +173,7 @@ def main():
                 cols = st.columns(3)
                 for idx, img_name in enumerate(images):
                     img_path = os.path.join(ss_dir, img_name)
-                    cols[idx % 3].image(img_path, caption=img_name, use_container_width=True)
+                    cols[idx % 3].image(img_path, caption=img_name, use_column_width=True)
             else:
                 st.info("No images found in the screenshots directory.")
 
