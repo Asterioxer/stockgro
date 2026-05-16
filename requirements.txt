@@ -1,11 +1,10 @@
-streamlit==1.32.0
+streamlit
 pandas
 numpy
-matplotlib
 plotly
+matplotlib
 seaborn
 statsmodels
 scikit-learn
 yfinance
 arch
-pillow
